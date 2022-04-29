@@ -24,6 +24,12 @@ docker run -it --rm --name=catchit-scanner -v $(pwd):/catchit/mnt catchit:latest
 
 # Windows powershell
 docker run -it --rm --name=catchit-scanner -v ${PWD}:/catchit/mnt catchit:latest
+
+# Alias
+cat << 'EOF' >> ~/.bashrc
+alias catchit='docker run -it --rm --name=catchit-scanner -v $(pwd):/catchit/mnt catchit:latest'
+EOF
+. ~/.bashrc
 ```
 
 ## Features
