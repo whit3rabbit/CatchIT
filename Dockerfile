@@ -11,4 +11,5 @@ RUN mkdir /catchit/mnt
 RUN chown -R catchit /catchit
 
 USER catchit
-ENTRYPOINT ["python3", "/catchit/catchit.py", "--scan-path", "/scan/mnt"]
+
+ENTRYPOINT ["python3", "/catchit/catchit.py", "--scan-path", "/catchit/mnt/"]
