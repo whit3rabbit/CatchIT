@@ -20,10 +20,10 @@ Goldman Sachs has developed a simple yet powerful framework called CatchIT that 
 docker build . -t catchit:latest --rm
 
 # Linux run
-docker run -it --rm --name=catchit-scanner -v $(pwd):/scan/mnt catchit:latest
+docker run -it --rm --name=catchit-scanner -v $(pwd):/catchit/mnt catchit:latest
 
 # Windows powershell
-docker run -it --rm --name=catchit-scanner -v ${pwd}:/scan/mnt catchit:latest
+docker run -it --rm --name=catchit-scanner -v ${pwd}:/catchit/mnt catchit:latest
 ```
 
 ## Features
