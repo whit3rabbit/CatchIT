@@ -3,9 +3,8 @@ FROM python:3.8.2-alpine
 WORKDIR /catchit
 
 RUN apk update && apk add --no-cache --upgrade \
-    grep bash locales && locale-gen en_US.UTF-8
+    grep bash
 
-RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
