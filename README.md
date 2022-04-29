@@ -14,6 +14,18 @@ Goldman Sachs has developed a simple yet powerful framework called CatchIT that 
 1. Find the sensitive files (Certs, RSA keys, AWS credentials etc)
 2. Search for the confidential Information in code (Passwords, AWS keys, Conn strings etc)
 
+## Docker
+```
+# Create docker image
+docker build . -t catchit:latest --rm
+
+# Linux run
+docker run -it --rm --name=catchit-scanner -v $(pwd):/scan/mnt catchit:latest
+
+# Windows powershell
+docker run -it --rm --name=catchit-scanner -v ${pwd}:/scan/mnt catchit:latest
+```
+
 ## Features
 1. More regular expressions can be added to the file <i>regexs.json</i>
 2. It is a CI/CD friendly tool as the median time for projects varying between 1000 and 10000 LoC is 0.3 seconds.
