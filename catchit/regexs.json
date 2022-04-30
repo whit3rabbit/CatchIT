@@ -7,6 +7,12 @@
             "entropy": 4, 
             "flag": "-PnroI"
         },
+        "RSA-KEY": { 
+            "regex": "(BEGIN (RSA|DSA|EC|PGP) PRIVATE KEY|PRIVATE KEY)", 
+            "confidence": 1, 
+            "entropy": 4, 
+            "flag": "-PnroI"
+        },
         "PASSWORD": {
             "regex": "<?(password|pass|passwd|pwd|secret|secret_?token|private_?key|public_?key|ap[ip]_?key|secretaccesskey)[_a-zA-Z0-9]{0,8}>?\\s{0,2}[=:<]\\s{0,2}['\"]?(?i)([a-zA-Z0-9][a-zA-Z0-9\\W]{5,40})['\"]?", 
             "confidence" :0.2, 
